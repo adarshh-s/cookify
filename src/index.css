@@ -1,0 +1,343 @@
+/* General Styling */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: linear-gradient(to bottom, #ffffff 0%, #ffbbaa 100%);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: 'Inter Tight', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  width: 100%;
+  height: 80px;
+}
+
+.logo {
+  display: flex;
+  width: 18rem;
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+}
+
+.title,
+.title-1 {
+  display: flex;
+  font-family: 'Belleza', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  justify-content: center;
+  font-size: 55px;
+  color: #d83f03;
+  margin-top: 80px;
+}
+
+.ing-form {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.textbox {
+  width: 439px;
+  height: 56px;
+  border-radius: 30px; /* Rounded corners */
+  border: 1px solid #ccc;
+  padding: 10px;
+  font-size: 16px;
+  background: #fff;
+  outline: none;
+}
+
+.textbox:focus {
+  border: 1px solid #ff5722;
+  box-shadow: 0px 0px 10px rgba(255, 87, 34, 0.5);
+}
+
+.button-1 {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background-color: #4ff549;
+  color: white;
+  font-size: 30px;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background 0.3s ease-in-out;
+}
+
+.button-1:hover {
+  background-color: #3acc40;
+}
+
+.sub-title {
+  display: flex;
+  font-size: 30px;
+  font-weight: bold;
+  color: #b7410e;
+  margin-top: 40px;
+  justify-content: center;
+}
+
+.ingredient-container {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.ingredient-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #b7410e;
+}
+
+/* Ingredient List */
+.ingredient-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  width: 1300px;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+}
+
+.ingredient-pill {
+  background-color: #ff8758;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 20px;
+  font-weight: bold;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease-in-out;
+  white-space: nowrap;
+  display: inline-block;
+  max-width: 120px;
+  text-align: center;
+  margin-left: 30px;
+}
+
+.ingredient-pill:hover {
+  transform: scale(1.1);
+}
+
+/* Get Recipe Container */
+.get-recipe-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f7e8d9ea;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 30px auto;
+}
+
+.get-recipe-container h3 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #d35400;
+}
+
+.get-recipe-container p {
+  margin: 5px 0 0;
+  font-size: 1rem;
+  color: #555;
+}
+
+.button-2 {
+  background: #d83f03;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.button-2:hover {
+  background: #e76b00;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .header {
+    height: 60px;
+  }
+
+  .title,
+  .title-1 {
+    font-size: 45px;
+    margin-top: 60px;
+  }
+
+  .logo {
+    width: 16rem;
+  }
+
+  .textbox {
+    width: 100%; /* Full width for smaller screens */
+    max-width: 400px; /* Maximum width */
+  }
+
+  .ingredient-list {
+    width: 100%; /* Full width on mobile */
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .ingredient-pill {
+    width: 100%;
+    max-width: 200px;
+    text-align: center;
+    margin-left: 0;
+  }
+
+  .get-recipe-container {
+    flex-direction: column;
+    align-items: center;
+    max-width: 100%;
+  }
+
+  .get-recipe-container h3 {
+    font-size: 1.2rem;
+  }
+
+  .button-1 {
+    width: 48px;
+    height: 48px;
+    font-size: 24px;
+  }
+
+  .button-2 {
+    width: 100%;
+    padding: 12px;
+    font-size: 1.2rem;
+  }
+
+  .sub-title {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    height: 50px;
+  }
+
+  .title,
+  .title-1 {
+    font-size: 40px;
+    margin-top: 50px;
+  }
+
+  .logo {
+    width: 14rem;
+  }
+
+  .textbox {
+    width: 100%;
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  .ingredient-list {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .ingredient-pill {
+    width: 100%;
+    max-width: 180px;
+    font-size: 14px;
+  }
+
+  .get-recipe-container {
+    padding: 16px;
+    max-width: 100%;
+  }
+
+  .get-recipe-container h3 {
+    font-size: 1rem;
+  }
+
+  .button-1 {
+    width: 44px;
+    height: 44px;
+    font-size: 20px;
+  }
+
+  .button-2 {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+  }
+
+  .sub-title {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 480px) {
+  .title,
+  .title-1 {
+    font-size: 30px;
+    margin-top: 30px;
+  }
+
+  .logo {
+    width: 12rem;
+  }
+
+  .textbox {
+    width: 100%;
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  .ingredient-pill {
+    width: 100%;
+    max-width: 160px;
+    font-size: 12px;
+  }
+
+  .button-1 {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+  }
+
+  .button-2 {
+    width: 100%;
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+
+  .sub-title {
+    font-size: 20px;
+  }
+}
